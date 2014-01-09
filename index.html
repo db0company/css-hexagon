@@ -17,7 +17,7 @@
       #hexagon-wrapper {
         text-align: center;
       }
-      #hexagon {
+      #hexagon-wrapper div {
         display: inline-block;
       }
       .pink-badge {
@@ -165,7 +165,7 @@
 
 	</div>
 	<div class="col-md-6">
-	  <div id="hexagon-wrapper"><div id="hexagon" class="hexagon-md hexagon-success"></div></div>
+	  <div id="hexagon-wrapper"><div class="hexagon-md hexagon-success"></div></div>
 	</div>
       </div>
       <div class="row">
@@ -231,13 +231,13 @@
       function onChange(e) {
 	     e.preventDefault();
 	     setTimeout(function() {
-		     $("#hexagon").removeClass();
-		     $("#hexagon").addClass('hexagon-' + $("#size .active input").prop("id"));
-		     $("#hexagon").addClass('hexagon-' + $("#color .active input").prop("id"));
+		     $("#hexagon-wrapper div").removeClass();
+		     $("#hexagon-wrapper div").addClass('hexagon-' + $("#size .active input").prop("id"));
+		     $("#hexagon-wrapper div").addClass('hexagon-' + $("#color .active input").prop("id"));
                      if ($("#hover .active input").prop("id") == 'yes')
-                       $("#hexagon").addClass("hexagon-hover");
+                       $("#hexagon-wrapper div").addClass("hexagon-hover");
                      if ($("#inline .active input").prop("id") == 'yes')
-                       $("#hexagon").addClass("hexagon-inline");
+                       $("#hexagon-wrapper div").addClass("hexagon-inline");
                      setCode();
 		 }, 100);
 	 }
