@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hexagon CSS / LESS</title>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="hexagon.css">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+    </script>
+    <![endif]-->
+
+    <style>
+      #hexagon-wrapper {
+        text-align: center;
+      }
+      #hexagon {
+        display: inline-block;
+      }
+      .pink-badge {
+        color: #ffffff;
+        text-align: center;
+        font-size: 23.799999999999997px;
+        margin: 17px 0;
+        width: 58.88972745704px;
+        height: 34px;
+        background-color: #ff88dd;
+        position: relative;
+        display: block;
+      }
+      .pink-badge:hover {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .pink-badge:before,
+      .pink-badge:after {
+        content: " ";
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-left: 29.44486372852px solid transparent;
+        border-right: 29.44486372852px solid transparent;
+        left: 0;
+      }
+      .pink-badge:before {
+        border-bottom: 17px solid #ff88dd;
+        top: -17px;
+      }
+      .pink-badge:after {
+        border-top: 17px solid #ff88dd;
+        bottom: -17px;
+      }
+      .play-link {
+        color: #ffffff;
+        text-align: center;
+        font-size: 30.799999999999997px;
+        margin: 22px 0;
+        width: 76.21023553264px;
+        height: 44px;
+        background-color: #66dd55;
+        position: relative;
+        display: block;
+      }
+      .play-link:hover {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .play-link:before,
+      .play-link:after {
+        content: " ";
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-left: 38.10511776632px solid transparent;
+        border-right: 38.10511776632px solid transparent;
+        left: 0;
+      }
+      .play-link:before {
+        border-bottom: 22px solid #66dd55;
+        top: -22px;
+      }
+      .play-link:after {
+        border-top: 22px solid #66dd55;
+        bottom: -22px;
+      }
+      .play-link:hover {
+        background-color: #33aa22;
+      }
+      .play-link:hover:before {
+        border-bottom-color: #33aa22;
+      }
+      .play-link:hover:after {
+        border-top-color: #33aa22;
+      }
+    </style>
+  </head>
+  <body>
+
+    <main class="container">
+
+      <div class="page-header">
+	<h1><div class="hexagon-xxs hexagon-success hexagon-inline"></div> Hexagon <small>CSS / LESS</small></h1>
+      </div>
+
+      <h2>CSS</h2>
+
+      
+      <div class="row">
+	<div class="col-md-6">
+
+	  <h3>Select your size</h3>
+	  <div class="btn-group" data-toggle="buttons" id="size">
+	    	    <label class="btn btn-default">
+	      <input type="radio" name="sizes" id="xxs"> xxs	    </label>
+	    	    <label class="btn btn-default">
+	      <input type="radio" name="sizes" id="xs"> xs	    </label>
+	    	    <label class="btn btn-default">
+	      <input type="radio" name="sizes" id="sm"> sm	    </label>
+	    	    <label class="btn btn-default active">
+	      <input type="radio" name="sizes" id="md"> md	    </label>
+	    	    <label class="btn btn-default">
+	      <input type="radio" name="sizes" id="lg"> lg	    </label>
+	    	    <label class="btn btn-default">
+	      <input type="radio" name="sizes" id="xl"> xl	    </label>
+	    	  </div>
+
+	  <h3>Select your color</h3>
+	  <div class="btn-group" data-toggle="buttons" id="color">
+	    	    <label class="btn btn-default">
+	      <input type="radio" name="colors" id="default"> default	    </label>
+	    	    <label class="btn btn-primary">
+	      <input type="radio" name="colors" id="primary"> primary	    </label>
+	    	    <label class="btn btn-success active">
+	      <input type="radio" name="colors" id="success"> success	    </label>
+	    	    <label class="btn btn-info">
+	      <input type="radio" name="colors" id="info"> info	    </label>
+	    	    <label class="btn btn-warning">
+	      <input type="radio" name="colors" id="warning"> warning	    </label>
+	    	    <label class="btn btn-danger">
+	      <input type="radio" name="colors" id="danger"> danger	    </label>
+	    	  </div>
+
+	  <h3>Change on hover</h3>
+	  <div class="btn-group" data-toggle="buttons" id="hover">
+	    <label class="btn btn-default active">
+	      <input type="radio" name="hover"> No
+	    </label>
+	    <label class="btn btn-default">
+	      <input type="radio" name="hover" id="yes"> Yes
+	    </label>
+	  </div>
+
+	  <h3>Inline / Block</h3>
+	  <div class="btn-group" data-toggle="buttons" id="inline">
+	    <label class="btn btn-default active">
+	      <input type="radio" name="inline"> Block
+	    </label>
+	    <label class="btn btn-default">
+	      <input type="radio" name="inline" id="yes"> Inline
+	    </label>
+	  </div>
+
+	</div>
+	<div class="col-md-6">
+	  <div id="hexagon-wrapper"><div id="hexagon" class="hexagon-md hexagon-success"></div></div>
+	</div>
+      </div>
+      <div class="row">
+	<div class="col-md-4">
+	  <h3>Get the code</h3>
+	</div>
+	<div class="col-md-8">
+	  In your <code>head</code> tag:
+	  <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;hexagon.css&quot;&gt;</pre>
+	  In your <code>body</code> tag:
+	  <pre id="hexagon-code"></pre>
+	</div>
+      </div>
+
+      <hr>
+
+      <h2>LESS</h2>
+
+      <div class="row">
+	<div class="col-md-4">
+	  <pre>@import "hexagon"
+
+.pink-badge {
+  .hexagon(34px, #f8d);
+}
+
+.play-link {
+  .hexagon(44px, #6d5);
+  &:hover {
+    .hexagon-changecolor(#2b6);
+  }
+}</pre>
+	</div>
+	<div class="col-md-4">
+	  <pre id="less-code"></pre>
+	</div>
+	<div class="col-md-4" id="less-live">
+<div class="pink-badge">
+  Love
+</div>
+<br>
+<a class="play-link" href="#">
+  Click
+</a>
+	</div>
+      </div>
+
+      <hr>
+      <footer class="footer text-right">
+	Made with love by <a href="http://db0.fr/">db0</a>
+	<br><br>
+      </footer>
+
+    </main>
+
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script>
+      $("#less-code").text($("#less-live").html());
+      function setCode() {
+             $("#hexagon-code").text($("#hexagon-wrapper").html());
+      }
+      function onChange(e) {
+	     e.preventDefault();
+	     setTimeout(function() {
+		     $("#hexagon").removeClass();
+		     $("#hexagon").addClass('hexagon-' + $("#size .active input").prop("id"));
+		     $("#hexagon").addClass('hexagon-' + $("#color .active input").prop("id"));
+                     if ($("#hover .active input").prop("id") == 'yes')
+                       $("#hexagon").addClass("hexagon-hover");
+                     if ($("#inline .active input").prop("id") == 'yes')
+                       $("#hexagon").addClass("hexagon-inline");
+                     setCode();
+		 }, 100);
+	 }
+      setCode();
+      $("#size .btn").click(onChange);
+      $("#color .btn").click(onChange);
+      $("#hover .btn").click(onChange);
+      $("#inline .btn").click(onChange);
+    </script>
+
+  </body>
+</html>
