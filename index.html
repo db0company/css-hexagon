@@ -20,6 +20,17 @@
       #hexagon-wrapper div {
         display: inline-block;
       }
+      .download-buttons {
+        margin: 80px;
+      }
+      .download-buttons .btn-lg {
+        margin: 20px;
+        padding: 20px;
+        font-size: 2em;
+      }
+      hr {
+        margin-bottom: 50px;
+      }
       .pink-badge {
         color: #ffffff;
         text-align: center;
@@ -113,13 +124,39 @@
 	<h1><div class="hexagon-xxs hexagon-success hexagon-inline"></div> Hexagon <small>CSS / LESS</small></h1>
       </div>
 
+      <div class="download-buttons text-center">
+	<a class="btn btn-lg btn-success" href="https://raw.github.com/db0company/css-hexagon/master/hexagon.min.css" target="_blank">
+	  <span class="glyphicon glyphicon-cloud-download"></span>
+	  Download CSS
+	</a>
+	<a class="btn btn-lg btn-default" href="https://raw.github.com/db0company/css-hexagon/master/hexagon.less" target="_blank">
+	  LESS
+	</a>
+	<br>
+	<a class="btn btn-link" href="https://raw.github.com/db0company/css-hexagon/master/hexagon.css" target="_blank">
+	  <span class="glyphicon glyphicon-download"></span>
+	  Readable CSS
+	</a>
+	<a class="btn btn-link" href="#css">
+	  CSS Documentation
+	</a>
+	<a class="btn btn-link" href="#less">
+	  LESS Documentation
+	</a>
+	<a class="btn btn-link" href="https://github.com/db0company/css-hexagon/" target="_blank">
+	  GitHub
+	</a>
+      </div>
+
+      <hr id="css">
+
       <h2>CSS</h2>
 
       
       <div class="row">
 	<div class="col-md-6">
 
-	  <h3>Select your size</h3>
+	  <h3>Size</h3>
 	  <div class="btn-group" data-toggle="buttons" id="size">
 	    	    <label class="btn btn-default">
 	      <input type="radio" name="sizes" id="xxs"> xxs	    </label>
@@ -135,7 +172,7 @@
 	      <input type="radio" name="sizes" id="xl"> xl	    </label>
 	    	  </div>
 
-	  <h3>Select your color</h3>
+	  <h3>Color</h3>
 	  <div class="btn-group" data-toggle="buttons" id="color">
 	    	    <label class="btn btn-default">
 	      <input type="radio" name="colors" id="default"> default	    </label>
@@ -151,7 +188,7 @@
 	      <input type="radio" name="colors" id="danger"> danger	    </label>
 	    	  </div>
 
-	  <h3>Change on hover</h3>
+	  <h3>Change on hover?</h3>
 	  <div class="btn-group" data-toggle="buttons" id="hover">
 	    <label class="btn btn-default active">
 	      <input type="radio" name="hover"> No
@@ -161,7 +198,7 @@
 	    </label>
 	  </div>
 
-	  <h3>Inline / Block</h3>
+	  <h3>Block or inline?</h3>
 	  <div class="btn-group" data-toggle="buttons" id="inline">
 	    <label class="btn btn-default active">
 	      <input type="radio" name="inline"> Block
@@ -181,20 +218,20 @@
 	  <h3>Get the code</h3>
 	</div>
 	<div class="col-md-8">
-	  In your <code>head</code> tag:
-	  <pre>&lt;link rel=&quot;stylesheet&quot; href=&quot;hexagon.css&quot;&gt;</pre>
-	  In your <code>body</code> tag:
-	  <pre id="hexagon-code"></pre>
+	  In <code>head</code>:
+	  <pre class="prettyprint lang-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;hexagon.min.css&quot;&gt;</pre>
+	  In <code>body</code>:
+	  <pre class="prettyprint lang-html" id="hexagon-code"></pre>
 	</div>
       </div>
 
-      <hr>
+      <hr id="less">
 
       <h2>LESS</h2>
 
       <div class="row">
 	<div class="col-md-4">
-	  <pre>@import "hexagon"
+	  <pre class="prettyprint lang-less">@import "hexagon"
 
 .pink-badge {
   .hexagon(34px, #f8d);
@@ -208,7 +245,7 @@
 }</pre>
 	</div>
 	<div class="col-md-4">
-	  <pre id="less-code"></pre>
+	  <pre class="prettyprint lang-html" id="less-code"></pre>
 	</div>
 	<div class="col-md-4" id="less-live">
 <div class="pink-badge">
@@ -231,6 +268,7 @@
 
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css"></script>
     <script>
       $("#less-code").text($("#less-live").html());
       function setCode() {
