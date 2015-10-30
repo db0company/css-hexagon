@@ -1,0 +1,24 @@
+
+{
+  "name": "css-hexagon",
+  "main": "hexagon.min.css",
+  "version": "0.0.0",
+  "homepage": "http://db0company.github.io/css-hexagon/",
+  "authors": [
+    "db0company <db0company@gmail.com>"
+  ],
+  "description": "A LESS script to generate CSS hexagons with custom size and color.",
+  "keywords": [
+    "css",
+    "less",
+    "hexagon"
+  ],
+  "license": "Apache2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
